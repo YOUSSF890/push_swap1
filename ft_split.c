@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylagzoul <ylagzoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/13 23:24:34 by ylagzoul          #+#    #+#             */
-/*   Updated: 2025/02/15 14:33:52 by ylagzoul         ###   ########.fr       */
+/*   Created: 2025/02/20 13:26:55 by ylagzoul          #+#    #+#             */
+/*   Updated: 2025/02/20 13:26:56 by ylagzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ft_freeup(char **strs, int i)
+void	ft_freeup(char **strs, int i)
 {
 	while (i-- > 0)
 	{
@@ -21,7 +21,7 @@ static void	ft_freeup(char **strs, int i)
 	free(strs);
 }
 
-static int	ft_wordcount(char *str, char c)
+int	ft_wordcount(char *str, char c)
 {
 	int	i;
 	int	word;
@@ -43,7 +43,7 @@ static int	ft_wordcount(char *str, char c)
 	return (word);
 }
 
-static void	ft_strcpy(char *word, char *str, char c, int j)
+void	ft_strcpy(char *word, char *str, char c, int j)
 {
 	int	i;
 
@@ -58,7 +58,7 @@ static void	ft_strcpy(char *word, char *str, char c, int j)
 	word[i] = '\0';
 }
 
-static char	*ft_stralloc(char *str, char c, int *k)
+char	*ft_stralloc(char *str, char c, int *k)
 {
 	char	*word;
 	int		start;

@@ -1,39 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ss.c                                               :+:      :+:    :+:   */
+/*   ss_bones.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylagzoul <ylagzoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 13:28:54 by ylagzoul          #+#    #+#             */
-/*   Updated: 2025/02/20 13:28:56 by ylagzoul         ###   ########.fr       */
+/*   Created: 2025/02/20 13:28:46 by ylagzoul          #+#    #+#             */
+/*   Updated: 2025/02/20 13:28:48 by ylagzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_a(t_list **sa)
+void	sa_bonus(t_list **sa)
 {
 	t_list	*second;
 
-	second = (*sa)->next;
 	if (!sa || !*sa || !(*sa)->next)
 		return ;
+	second = (*sa)->next;
 	(*sa)->next = (*sa)->next->next;
 	second->next = (*sa);
 	*sa = second;
-	write (1, "sa\n", 3);
 }
 
-void	swap_b(t_list **sb)
+void	sb_bonus(t_list **sb)
 {
 	t_list	*second;
 
-	second = (*sb)->next;
 	if (!sb || !*sb || !(*sb)->next)
 		return ;
+	second = (*sb)->next;
 	(*sb)->next = (*sb)->next->next;
 	second->next = (*sb);
 	*sb = second;
-	write (1, "sb\n", 3);
+}
+
+void	ss_bonus(t_list **sa, t_list **sb)
+{
+	sa_bonus(sa);
+	sb_bonus(sb);
 }

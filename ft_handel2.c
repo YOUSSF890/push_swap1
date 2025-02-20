@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylagzoul <ylagzoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/13 23:24:20 by ylagzoul          #+#    #+#             */
-/*   Updated: 2025/02/15 13:51:10 by ylagzoul         ###   ########.fr       */
+/*   Created: 2025/02/20 13:26:39 by ylagzoul          #+#    #+#             */
+/*   Updated: 2025/02/20 13:26:41 by ylagzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,26 +49,26 @@ void	free_stack(t_list	**list)
 	}
 }
 
-char	*ft_strdup(const char *s1)
-{
-	int		i;
-	int		a;
-	int		len;
-	char	*dst;
+// char	*ft_strdup(const char *s1)
+// {
+// 	int		i;
+// 	int		a;
+// 	int		len;
+// 	char	*dst;
 
-	a = 0;
-	while (s1[a])
-		a++;
-	len = a + 1;
-	dst = malloc (sizeof(char) * len);
-	if (!dst)
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		dst[i] = s1[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
+// 	a = 0;
+// 	while (s1[a])
+// 		a++;
+// 	len = a + 1;
+// 	dst = malloc (sizeof(char) * len);
+// 	if (!dst)
+// 		return (NULL);
+// 	i = 0;
+// 	while (s1[i])
+// 	{
+// 		dst[i] = s1[i];
+// 		i++;
+// 	}
+// 	dst[i] = '\0';
+// 	return (dst);
+// }

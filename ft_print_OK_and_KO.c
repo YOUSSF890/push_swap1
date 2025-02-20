@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   cc.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylagzoul <ylagzoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 13:28:10 by ylagzoul          #+#    #+#             */
-/*   Updated: 2025/02/20 13:28:12 by ylagzoul         ###   ########.fr       */
+/*   Created: 2025/02/20 13:47:39 by ylagzoul          #+#    #+#             */
+/*   Updated: 2025/02/20 13:48:07 by ylagzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_b(t_list	**stack_a, t_list	**stack_b)
+void ft_print_KO(t_list *copy)
 {
-	t_list	*node;
-
-	node = *stack_a;
-	*stack_a = (*stack_a)->next;
-	node->next = *stack_b;
-	*stack_b = node;
-	write (1, "pb\n", 3);
+    write(1, "KO\n", 3);
+	free_stack(&copy);
+	exit(1);
 }
 
-void	push_a(t_list	**stack_b, t_list	**stack_a)
+void ft_print_KO2(t_list **stack_a, t_list **stack_b)
 {
-	t_list	*node;
+    write(1, "KO\n", 3);
+	free_stack(stack_a);
+	free_stack(stack_b);
+	exit(1);
+}
 
-	node = *stack_b;
-	*stack_b = (*stack_b)->next;
-	node->next = *stack_a;
-	*stack_a = node;
-	write (1, "pa\n", 3);
+void ft_print_OK(t_list *copy)
+{
+    write(1, "OK\n", 3);
+	free_stack(&copy);
+	exit(1);
 }

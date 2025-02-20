@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrr.c                                              :+:      :+:    :+:   */
+/*   rrr_bones.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylagzoul <ylagzoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 13:28:37 by ylagzoul          #+#    #+#             */
-/*   Updated: 2025/02/20 13:28:39 by ylagzoul         ###   ########.fr       */
+/*   Created: 2025/02/20 13:28:29 by ylagzoul          #+#    #+#             */
+/*   Updated: 2025/02/20 13:29:45 by ylagzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate_a(t_list	**rra)
+void	rra_bonus(t_list	**rra)
 {
 	t_list	*second_last;
 	t_list	*current;
@@ -29,10 +29,9 @@ void	reverse_rotate_a(t_list	**rra)
 	second_last->next = NULL;
 	current->next = *rra;
 	*rra = current;
-	write (1, "rra\n", 4);
 }
 
-void	reverse_rotate_b(t_list	**rrb)
+void	rrb_bonus(t_list	**rrb)
 {
 	t_list	*last;
 	t_list	*second_last;
@@ -52,5 +51,10 @@ void	reverse_rotate_b(t_list	**rrb)
 	second_last->next = NULL;
 	last->next = *rrb;
 	*rrb = last;
-	write (1, "rrb\n", 4);
+}
+
+void	rrr_bonus(t_list **rra, t_list **rrb)
+{
+	rra_bonus(rra);
+	rrb_bonus(rrb);
 }

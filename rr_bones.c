@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   rr_bones.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylagzoul <ylagzoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 13:28:24 by ylagzoul          #+#    #+#             */
-/*   Updated: 2025/02/20 13:28:26 by ylagzoul         ###   ########.fr       */
+/*   Created: 2025/02/20 13:28:17 by ylagzoul          #+#    #+#             */
+/*   Updated: 2025/02/20 13:28:20 by ylagzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate_a(t_list	**ra)
+void	ra_bonus(t_list	**ra)
 {
 	t_list	*a;
 	t_list	*second;
@@ -28,10 +28,9 @@ void	rotate_a(t_list	**ra)
 	last->next = a;
 	a->next = NULL;
 	*ra = second;
-	write (1, "ra\n", 3);
 }
 
-void	rotate_b(t_list	**rb)
+void	rb_bonus(t_list	**rb)
 {
 	t_list	*a;
 	t_list	*second;
@@ -47,5 +46,10 @@ void	rotate_b(t_list	**rb)
 	last->next = a;
 	a->next = NULL;
 	*rb = second;
-	write (1, "rb\n", 3);
+}
+
+void	rr_bonus(t_list **ra, t_list **rb)
+{
+	ra_bonus(ra);
+	rb_bonus(rb);
 }

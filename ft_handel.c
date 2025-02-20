@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ylagzoul <ylagzoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/13 23:24:11 by ylagzoul          #+#    #+#             */
-/*   Updated: 2025/02/16 13:28:04 by ylagzoul         ###   ########.fr       */
+/*   Created: 2025/02/20 13:26:32 by ylagzoul          #+#    #+#             */
+/*   Updated: 2025/02/20 13:30:21 by ylagzoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,8 +101,6 @@ void	check_duplicate_numbers(t_list **stack_a)
 		i++;
 	}
 }
-
-
 
 void	convert_to_stack(char	**str, t_list	**a)
 {
